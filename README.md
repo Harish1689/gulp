@@ -1,17 +1,17 @@
-# Setup the gulp by git repo
+# To set up Gulp using a Git repository:
 
 Clone the repository into your project and execute the following command. Make sure to maintain the same directory structure at the root level. If necessary, you can modify the path in the 'gulpfile.js' `gulpfile.js` file.
 
 Run command:-
 
 ```bash
-npm install
-gulp
+- npm install
+- gulp
 ```
 
 Note: Ensure that Gulp.js is first installed globally on your system before proceeding with the following steps.
 
-# For a new installation
+# To set up Gulp in new installation
 
 If you wish to manually install Gulp for your project, you can follow these setup instructions:
 
@@ -25,11 +25,11 @@ If you wish to manually install Gulp for your project, you can follow these setu
 
 3. Install plugins
 
-#### \*SCSS convert, min, and autoprefixer
+**SCSS convert, min, and autoprefixer**
 
 `npm install --save-dev gulp-sass gulp-autoprefixer gulp-clean-css`
 
-#### \*JS minx
+**JS minx , image optimization , webp images generate**
 
 - `npm install ——save-dev gulp-terser`
 - `npm install --save-dev gulp-imagemin gulp-webp`
