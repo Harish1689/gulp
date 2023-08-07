@@ -1,0 +1,42 @@
+/**
+  * Responsive breakpoints 
+**/
+
+@mixin devicebreak($point) {
+  @if $point==xxsmall {
+    /* xxsmall design */
+    @media (max-width: 321px) {
+      @content;
+    }
+  }
+  @else if $point==xsmall {
+    /* xsmall design  */
+    @media (max-width: 481px) {
+      @content;
+    }
+  }
+  @else if $point==$small {
+    /* tab design */
+    @media (min-width: 769px) {
+      @content;
+    }
+  }
+  @else if $point==$medium {
+    /* tab / screen medium design */
+    @media (min-width: 1025px) {
+      @content;
+    }
+  }
+  @else if $point==large {
+    /* large design */
+    @media (min-width: 1201px) {
+      @content;
+    }
+  }
+  @else if $point==xlarge {
+    /* xlarge design */
+    @media (min-width: 1441px) {
+      @content;
+    }
+  }
+}

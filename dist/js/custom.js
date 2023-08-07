@@ -1,0 +1,1 @@
+const toggleButton=document.getElementById("toggleButton"),toggleDiv=document.getElementById("toggleDiv");toggleButton.addEventListener("click",(()=>{"none"===toggleDiv.style.display?toggleDiv.style.display="block":toggleDiv.style.display="none"}));

@@ -1,0 +1,90 @@
+@use 'sass:math';
+@import './variables';
+@import './breakpoints';
+//background image gradient
+@mixin background-image($deg, $colorname, $opacity) {
+	background: linear-gradient($deg, $colorname, $opacity);
+}
+
+// select box appearance
+@mixin x-appearance($value) {
+	-webkit-appearance: $value;
+	-moz-appearance: $value;
+	appearance: $value;
+}
+
+//animation
+@mixin animation($animation) {
+	-webkit-animation: $animation;
+	-moz-animation: $animation;
+	-ms-animation: $animation;
+	-o-animation: $animation;
+	animation: $animation;
+}
+
+//keyframe
+@mixin keyframes($keyframes...) {
+	-webkit-keyframes: $keyframes;
+	-moz-keyframes: $keyframes;
+	-ms-keyframes: $keyframes;
+	-o-keyframes: $keyframes;
+	keyframes: $keyframes;
+}
+
+//transition
+@mixin transition($transitions...) {
+	-webkit-transition: $transitions;
+	-moz-transition: $transitions;
+	-ms-transition: $transitions;
+	-o-transition: $transitions;
+	transition: $transitions;
+}
+
+//transition-delay
+@mixin transitiondelay($transitiondelay...) {
+	-webkit-transition-delay: $transitiondelay;
+	-moz-transition-delay: $transitiondelay;
+	-ms-transition-delay: $transitiondelay;
+	-o-transition-delay: $transitiondelay;
+	transition-delay: $transitiondelay;
+}
+
+//transform
+@mixin transform($transforms) {
+	-webkit-transform: $transforms;
+	-moz-transform: $transforms;
+	-ms-transform: $transforms;
+	-o-transform: $transforms;
+	transition: $transforms;
+}
+
+// Rotate
+@mixin rotate($deg) {
+	@include transform(rotate(#{$deg}deg));
+}
+
+// Translate
+@mixin translate($x, $y) {
+	@include transform(translate($x, $y));
+}
+
+// Scale
+@mixin scale($scale) {
+	@include transform(scale($scale));
+}
+
+// Skew
+@mixin skew($x, $y) {
+	@include transform(skew(#{$x}deg, #{$y}deg));
+}
+/* mixing  end */
+
+/* placehoder start */
+%container {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1280px;
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+}
+/* placehoder end */

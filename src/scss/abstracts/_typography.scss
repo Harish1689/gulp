@@ -1,0 +1,185 @@
+/**
+  * Typograpgy
+**/
+
+@import './variables';
+@import './breakpoints';
+@import './mixins';
+html {
+	-webkit-tap-highlight-color: transparent;
+}
+
+* {
+	box-sizing: border-box;
+	&:hover:focus {
+		box-shadow: none !important;
+	}
+	&:focus {
+		box-shadow: none !important;
+	}
+}
+
+body {
+	font-family: $Roboto;
+	color: $color-black;
+	font-size: $rem-base;
+	font-weight: normal;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	color: $color-black;
+	&:hover {
+		text-decoration: underline;
+		color: $color-green;
+	}
+	&:focus {
+		box-shadow: none !important;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+caption {
+	margin: 0;
+	padding: 0;
+	@include devicebreak(medium) {
+		margin-bottom: $font-size-16;
+	}
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $color-black;
+	line-height: 1.2;
+	margin-bottom: 0.5em;
+	text-transform: none;
+	font-weight: 300;
+	text-align: left;
+	a {
+		color: inherit;
+	}
+}
+
+h1,
+.h1,
+%h1 {
+	@media #{$small-up} {
+		font-size: rem(42px);
+	}
+	color: $color-black;
+	font-size: rem(26px);
+	letter-spacing: rem(-0.8px);
+	line-height: 1;
+	font-family: $Roboto;
+}
+
+h2,
+.h2,
+%h2 {
+	@media #{$small-up} {
+		font-size: rem(26px);
+		letter-spacing: rem(-1px);
+	}
+	font-size: rem(24px);
+	letter-spacing: 0;
+	line-height: 1;
+	font-weight: 500;
+}
+
+h3,
+.h3,
+%h3 {
+	@media #{$small-up} {
+		font-size: rem(24px);
+		letter-spacing: rem(-0.75px);
+		line-height: get-line-height(50px, 48px);
+	}
+	font-size: rem(22px);
+	letter-spacing: rem(-0.5px);
+	line-height: get-line-height(38px, 36px);
+}
+
+h4,
+.h4,
+%h4 {
+	font-size: rem(24px);
+	letter-spacing: rem(-0.25px);
+	margin-bottom: 16px;
+	line-height: get-line-height(32px, 24px);
+	font-weight: 400;
+}
+
+h5,
+.h5,
+%h5 {
+	font-size: rem(18px);
+	letter-spacing: rem(-0.25px);
+	line-height: get-line-height(28px, 24px);
+	font-weight: 400;
+}
+
+h6,
+.h6,
+%h6 {
+	font-size: rem(14px);
+	letter-spacing: rem(-0.25px);
+	line-height: get-line-height(28px, 24px);
+	font-weight: 400;
+}
+
+p {
+	margin: 0 0 8px;
+	text-align: left;
+}
+
+strong,
+b {
+	font-weight: $semibold;
+}
+
+em {
+	font-style: italic;
+}
+
+blockquote {
+	border-left: 5px solid rgba($color-red, 0.5);
+	margin-left: 2em;
+	padding-left: 1em;
+}
+
+// list start
+ol,
+ul {
+	padding: 0 0 0 10px;
+	text-align: left;
+	ol,
+	ul {
+		margin-bottom: 0;
+	}
+	li {
+		line-height: 1.6;
+
+		padding: 0;
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}
+// list end
